@@ -3,20 +3,22 @@
 ### Mini Project 4
 
 
-# Mini Project 4 - Expense Tracker with Enhanced Authentication
+# Mini Project 4 - Django Polls Application with Authentication
 
 ## Description
 
-This project extends a basic Flask expense tracker application by adding robust user authentication features. It includes user registration, login, and logout functionalities, enhanced with Bootstrap modals for user feedback. The application utilizes a SQLite database for user management and session handling for secure user sessions.
+This project is a Django-based web application for creating and participating in polls. It allows users to view the latest polls, vote on choices, and see the results. Additionally, it incorporates a user registration and login system to manage user access. The application utilizes Bootstrap for responsive styling and includes a modal for displaying general information.
 
 ### Key features include:
 
-* **User Registration:** Allows new users to register with a unique username, first name, last name, and password.
-* **User Login:** Enables registered users to log in using their credentials.
-* **User Logout:** Provides a secure way for users to log out of their session.
-* **Bootstrap Modals:** Displays success and error messages using Bootstrap modals for a better user experience.
-* **Database Integration:** Uses SQLite to store user data securely.
-* **Session Management:** Manages user sessions to maintain login status.
+* **View Latest Polls:** Displays a list of the most recently published polls on the homepage.
+* **Vote on Polls:** Allows users to select a choice and cast their vote on a specific poll.
+* **View Poll Results:** Shows the vote counts for each choice in a poll.
+* **User Registration:** Enables new users to create an account with a username and password.
+* **User Login:** Allows registered users to log in to the application.
+* **User Logout:** Provides a way for logged-in users to securely log out.
+* **Django Admin:** Utilizes the built-in Django admin interface for managing polls, questions, and choices with customized styling.
+* **Bootstrap Integration:** Uses Bootstrap for responsive design and includes a modal for displaying information.
 
 ## Getting Started
 
@@ -29,41 +31,50 @@ This project extends a basic Flask expense tracker application by adding robust 
     pip install -r requirements.txt
     ```
 
-2.  **Setup Database:**
-    * Initialize the SQLite database using Flask:
+2.  **Initialize the Database:**
+    * Make Migrations:
     ```
-    flask --app flaskr init-db
+    python manage.py makemigrations
+    ```
+    
+3.  **Initialize the Database:**
+    * Apply Migrations:
+    ```
+    python manage.py migrate
+    ```
+4.  **Create a Superuser (for Django Admin):**
+    * Make Migrations:
+    ```
+    python manage.py createsuperuser
     ```
 
 ### Executing program
 
 1.  **Run the Application:**
-    * Start the Flask development server:
+    * Start the development server::
     ```
-    flask --app flaskr run
+    python manage.py runserver
     ```
 
 ### Output
 
-* **Registration:** Navigate to `/auth/register` to create a new user account.
-* **Login:** Navigate to `/auth/login` to log in with an existing account.
-* **Logout:** Click the "Log Out" link in the navigation bar to end the session.
-* **Add Expenses:** After logging in, use the dashboard to add new expense entries.
-* **Edit Expenses:** Modify existing expense entries through the dashboard interface.
-* **Delete Expenses:** Remove expense entries as needed.
-* **Add Categories:** Create and manage expense categories to organize your expenses.
-* The application will display success or error messages using Bootstrap modals after each authentication and expense related action.
+* **Homepage (Latest Polls):** Navigate to `http://127.0.0.1:8000/` to view the list of the latest polls.
+* **Poll Detail and Voting:** Click on a poll question to go to the detail page (e.g., `http://127.0.0.1:8000/1/`). Here you can vote on the available choices.
+* **Poll Results:** After voting, you will be redirected to the results page for that poll (e.g., `http://127.0.0.1:8000/1/results/`).
+* **About Us:** Navigate to `http://127.0.0.1:8000/about/` to view the "About Us" page.
+* **Contact Us:** Navigate to `http://127.0.0.1:8000/contact/` to view the "Contact Us" page.
+* **Register:** Navigate to `http://127.0.0.1:8000/register/` to create a new user account.
+* **Login:** Navigate to `http://127.0.0.1:8000/login/` to log in with an existing user account.
+* **Logout:** If you are logged in, you will see a "Logout" button on the homepage.
+* **Django Admin:** Access the Django admin interface by navigating to `http://127.0.0.1:8000/admin/`. Log in with the superuser credentials you created earlier to manage your polls, questions, and choices through a web interface.
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Tanzeem Siddique
+Tanzeem Siddique
 
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [Flask](https://flask.palletsprojects.com/en/stable/tutorial/)
+* [Django](https://docs.djangoproject.com/en/4.2/intro/)
 * [Bootstrap](https://flask.palletsprojects.com/en/stable/tutorhttps://getbootstrap.com/docs/5.3/getting-started/introduction/)
-* [YouTube](https://www.youtube.com/watch?v=Yry14DldSvs)
-* [YouTube](https://chatgpt.com/share/67df4d0f-a480-8013-a2f3-7c73353eccc8https://chatgpt.com/share/67df4d0f-a480-8013-a2f3-7c73353eccc8)
+* [YouTube](https://www.youtube.com/watch?v=lSqCJqnwCb8)
