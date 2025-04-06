@@ -10,7 +10,7 @@ urlpatterns = [
     path("<int:question_id>/vote/", views.vote, name="vote"),
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
-    path("login/", auth_views.LoginView.as_view(template_name="polls/login.html"), name="login"),
+    path("login/", auth_views.LoginView.as_view(template_name="polls/login.html", success_url="polls:index"), name="login"),
     path("logout/", auth_views.LogoutView.as_view(next_page="polls:index"), name="logout"),
     path("register/", views.register, name="register"),
 ]
