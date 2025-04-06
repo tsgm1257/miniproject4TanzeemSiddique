@@ -59,14 +59,9 @@ This project is a Django-based web application for creating and participating in
 ### Output
 
 * **Homepage (Latest Polls):** Navigate to `http://127.0.0.1:8000/` to view the list of the latest polls.
-* **Poll Detail and Voting:** Click on a poll question to go to the detail page (e.g., `http://127.0.0.1:8000/1/`). Here you can vote on the available choices.
-* **Poll Results:** After voting, you will be redirected to the results page for that poll (e.g., `http://127.0.0.1:8000/1/results/`).
+* **Django Admin:** Access the Django admin interface by navigating to `http://127.0.0.1:8000/admin/`. Log in with the superuser credentials you created earlier to manage your polls, questions, and choices through a web interface.
 * **About Us:** Navigate to `http://127.0.0.1:8000/about/` to view the "About Us" page.
 * **Contact Us:** Navigate to `http://127.0.0.1:8000/contact/` to view the "Contact Us" page.
-* **Register:** Navigate to `http://127.0.0.1:8000/register/` to create a new user account.
-* **Login:** Navigate to `http://127.0.0.1:8000/login/` to log in with an existing user account.
-* **Logout:** If you are logged in, you will see a "Logout" button on the homepage.
-* **Django Admin:** Access the Django admin interface by navigating to `http://127.0.0.1:8000/admin/`. Log in with the superuser credentials you created earlier to manage your polls, questions, and choices through a web interface.
 
 ## Authors
 
